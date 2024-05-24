@@ -4,7 +4,7 @@ import '../App.css';  // Make sure to import the CSS
 function Profile() {
   return (
     <div className="profile-container">
-      <img src="../images/GabrielMoya.png" alt="Profile" className="profile-image" />
+      <img src={`${process.env.PUBLIC_URL}/images/GabrielMoya.png`} alt="Profile" className="profile-image" />
       <div className="profile-text">
         <h1>PERFIL</h1>
         <p>9 años de experiencia liderando equipos multi-disciplinarios en empresas tecnológicas de primer nivel. 
