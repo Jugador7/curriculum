@@ -14,13 +14,11 @@ function Profile() {
       </div>
       <div className="profile-text">
         <h1>CONTACTO</h1>
-        <p>
-          <ul>
-            <li>(+57) 3112642895</li>
-            <li>moyagabrie14@gmail.com</li>
-            <li>Bogotá, Colombia.</li>
-          </ul>
-        </p>
+        <ul>
+          <li><i className="fas fa-phone-alt"></i> (+57) 3112642895</li>
+          <li><i className="fas fa-envelope"></i> moyagabriel14@gmail.com</li>
+          <li><i className="fas fa-map-marker-alt"></i> Bogotá, Colombia.</li>
+        </ul>
       </div>  
     </div>
   );
