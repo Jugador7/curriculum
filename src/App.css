@@ -13,8 +13,8 @@
   align-items: center; /* Center children horizontally */
   justify-content: center; /* Center children vertically */
   background-color: #000080; /* Dark blue background */
-  padding: 10px;
-  margin: 0px;
+  padding: 20px;
+  margin: 10px;
   border: 4px solid #FFFFFF; /* Adds a 'border' that looks like a margin */
   box-shadow: 0px 1px 6px 0px #000000; /* Adds shadow under the border */
   border-radius: 10px; /* Adds rounded corners with a 10px radius */
@@ -27,6 +27,13 @@
   border-radius: 10px; /* Adds rounded corners with a 10px radius */
   border: 4px solid #FFFFFF; /* Optional: adds a white border */
 }
+
+.profile-text {
+  align-items: flex-start; /* Overrides parent centering, aligns text to start */
+  text-align: left; /* Ensures text within is aligned left */
+  width: 100%; /* Ensures the div takes full width if not already set */
+}
+
 .profile-text h1 {
   color: #FFDB58; /* Yellow color for the main title */
   font-size: 24px; /* Example font size, adjust as needed */
@@ -39,12 +46,41 @@
   text-align: left;
   font-weight: 700;  /* Example font size, adjust as needed */
 }  
+
 .profile-text ul {
   color: #FFFFFF; /* White color for the subtitle */
   font-size: 18px; /* Example font size, adjust as needed */
   text-align: left;
   font-weight: 700;  /* Example font size, adjust as needed */
+  list-style: none; /* Removes default list bullets */
+  padding: 0;
 } 
+
+.profile-text li {
+  margin: 10px 0; /* Adds vertical space between list items */
+  align-items: center; /* Aligns icons and text vertically */
+  display: flex; /* Lays out the icon and text in a horizontal row */
+}
+
+.profile-text li i {
+  margin-right: 10px; /* Adds space between the icon and the text */
+  color: #FFFFFF; /* Adjust color as needed */
+}
+
+.profile-text:nth-of-type(1)::after {
+  content: "";
+  position: absolute;
+  bottom: -20px; /* Adjust this value to control the vertical position of the line */
+  left: 50%;
+  width: 80%; /* Adjust the width as needed */
+  height: 2px; /* Line thickness */
+  background-color: #FFFFFF; /* Line color */
+  transform: translateX(-50%); /* Centers the line horizontally */
+}
+
+.profile-text:nth-of-type(2) {
+  margin-top: 40px; /* Add margin to create space between the line and the next profile-text */
+}
 
 
 /* HEADER */
@@ -73,32 +109,49 @@
   font-weight: 700;  /* Example font size, adjust as needed */
 }  
 
+/*Experience&Education*/
+.exp-ed-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  padding: 0px 15px;
+  margin: 20px 0; /* Add margin to separate from other containers */
+}
+.exp-ed-text {
+  align-items: flex-start; /* Overrides parent centering, aligns text to start */
+  width: 100%; /* Ensures the div takes full width if not already set */
+}
+.exp-ed-text h1 {
+  color: #000080; /* Red color for the main title */
+  font-size: 24px; /* Example font size, adjust as needed */
+  text-align: center; /* Ensures text within is aligned left */
+  font-weight: 700;  /* Example font size, adjust as needed */
+}
+.exp-ed-text h2 {
+  color: #CD0000; /* Black color for the subtitle */
+  font-size: 20px; /* Example font size, adjust as needed */
+  text-align: left; /* Ensures text within is aligned left */
+  font-weight: 700;  /* Example font size, adjust as needed */
+} 
+.exp-ed-text h3 {
+  color: #000000; /* Black color for the subtitle */
+  font-size: 20px; /* Example font size, adjust as needed */
+  text-align: left; /* Ensures text within is aligned left */
+  font-weight: 700;  /* Example font size, adjust as needed */
+} 
+.exp-ed-text p {
+  color: #000000; /* Black color for the subtitle */
+  font-size: 18px; /* Example font size, adjust as needed */
+  text-align: left; /* Ensures text within is aligned left */
+}  
+
 /* BODY */
 body {
     margin: 0px; /* Overwriting the body style */
     font-family: 'Montserrat', sans-serif; /* Apply Montserrat to the entire application */
 }
 
-/* PROFILE */
-
-.profile-container {
-  background-color: #000080; /* Dark blue background */
-  padding: 20px;
-  margin: 10px;
-  border: 4px solid #FFFFFF; /* Adds a 'border' that looks like a margin */
-  box-shadow: 0px 1px 6px 0px #000000; /* Adds shadow under the border */
-  border-radius: 10px; /* Adds rounded corners with a 10px radius */
-}
-.profile-text h1 {
-  color: #FFDB58; /* Yellow color for the main title */
-  font-size: 21x; /* Example font size, adjust as needed */
-  text-align: left;
-}
-.profile-text p {
-  color: #FFFFFF; /* White color for the subtitle */
-  font-size: 18px; /* Example font size, adjust as needed */
-  text-align: left;
-}  
 
 /* Desktop view: Profile appears above the Header */
 @media (min-width: 1500px) {
@@ -122,6 +175,10 @@ body {
     border-bottom: 4px solid #FFFFFF; /* Adds a 'border' that looks like a margin */
     box-shadow: 0px 1px 6px 0px #000000; /* Adds shadow under the border */
   }
+  .exp-ed-container {
+    max-width: 60%;       /* Resets the width to take full available space */
+    margin-left: 350px;
+  }
 }
 
 /* Mobile view adjustments to ensure profile appears below the Header */
@@ -138,9 +195,5 @@ body {
     height: 90%; /* Smaller size on mobile */
   }
 }
-
-/*  */
-
-/* BODY */
   
   /* Additional styles for other components can be added here */
