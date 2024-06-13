@@ -34,8 +34,8 @@
   width: 100%; /* Ensures the div takes full width if not already set */
 }
 
-.profile-text h1 {
-  color: #FFDB58; /* Yellow color for the main title */
+.profile-text h3 {
+  color: #CDCDCD; /* Gray color for the main title */
   font-size: 24px; /* Example font size, adjust as needed */
   text-align: left;
   font-weight: 700;  /* Example font size, adjust as needed */
@@ -57,6 +57,7 @@
 } 
 
 .profile-text li {
+  color: #FFFFFF; /* White color for the subtitle */
   margin: 10px 0; /* Adds vertical space between list items */
   align-items: center; /* Aligns icons and text vertically */
   display: flex; /* Lays out the icon and text in a horizontal row */
@@ -89,19 +90,19 @@
   justify-content: flex-start; /* Aligns items to the left */
   background-color: #000080; /* Dark blue background */
   color: #FFFFFF;
-  padding: 40px 20px;
+  padding: 30px 20px;
   height: 120px;
   border-bottom: 4px solid #FFFFFF; /* Adds a 'border' that looks like a margin */
   box-shadow: 0px 1px 6px 0px #000000; /* Adds shadow under the border */
 }
 .header-text h1 {
-  color: #FFDB58; /* Yellow color for the main title */
+  color: #CDCDCD; /* Gray color for the main title */
   margin: 0; /* Remove default margin */
   font-size: 48px; /* Example font size, adjust as needed */
   text-align: center;
   font-weight: 700;  /* Example font size, adjust as needed */
 }
-.header-text p {
+.header-text h2 {
   color: #FFFFFF; /* White color for the subtitle */
   margin: 0; /* Remove default margin */
   font-size: 28px; /* Example font size, adjust as needed */
@@ -109,8 +110,9 @@
   font-weight: 700;  /* Example font size, adjust as needed */
 }  
 
-/*Experience&Education*/
-.exp-ed-container {
+
+/*Experience*/
+.experience-container {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center items horizontally */
@@ -118,33 +120,39 @@
   padding: 0px 15px;
   margin: 20px 0; /* Add margin to separate from other containers */
 }
-.exp-ed-text {
+.experience-text {
   align-items: flex-start; /* Overrides parent centering, aligns text to start */
   width: 100%; /* Ensures the div takes full width if not already set */
 }
-.exp-ed-text h1 {
-  color: #000080; /* Red color for the main title */
-  font-size: 24px; /* Example font size, adjust as needed */
-  text-align: center; /* Ensures text within is aligned left */
-  font-weight: 700;  /* Example font size, adjust as needed */
+
+/*Academic Background*/
+.academic-background {
+  display: flex;
+  flex-direction: column;
+  align-items: left; /* Center items horizontally */
+  justify-content: left; /* Center items vertically */
+  padding: 0px 15px;
+  margin: 20px 0; /* Add margin to separate from other containers */
 }
-.exp-ed-text h2 {
-  color: #CD0000; /* Black color for the subtitle */
-  font-size: 20px; /* Example font size, adjust as needed */
-  text-align: left; /* Ensures text within is aligned left */
-  font-weight: 700;  /* Example font size, adjust as needed */
-} 
-.exp-ed-text h3 {
-  color: #000000; /* Black color for the subtitle */
-  font-size: 20px; /* Example font size, adjust as needed */
-  text-align: left; /* Ensures text within is aligned left */
-  font-weight: 700;  /* Example font size, adjust as needed */
-} 
-.exp-ed-text p {
-  color: #000000; /* Black color for the subtitle */
-  font-size: 18px; /* Example font size, adjust as needed */
-  text-align: left; /* Ensures text within is aligned left */
-}  
+
+.academic-background h3 {
+  text-align: left; /* Center items horizontally */
+}
+
+/*Additional training*/
+.additional-training {
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* Center items horizontally */
+  align-items: left; /* Center items horizontally */
+  justify-content: left; /* Center items vertically */
+  padding: 0px 15px;
+  margin: 20px 0; /* Add margin to separate from other containers */
+}
+
+.additional-training h3 {
+  text-align: left; /* Center items horizontally */
+}
 
 /* BODY */
 body {
@@ -152,47 +160,103 @@ body {
     font-family: 'Montserrat', sans-serif; /* Apply Montserrat to the entire application */
 }
 
+h3 {
+  color: #000080; /* Red color for the main title */
+  font-size: 24px; /* Example font size, adjust as needed */
+  text-align: center; /* Ensures text within is aligned left */
+  font-weight: 700;  /* Example font size, adjust as needed */
+}
+
+h4 {
+  color: #000000; /* Black color for the subtitle */
+  font-size: 20px; /* Example font size, adjust as needed */
+  text-align: left; /* Ensures text within is aligned left */
+  font-weight: 700;  /* Example font size, adjust as needed */
+  margin: 0;
+} 
+
+h5 {
+  color: #CD0000; /* Black color for the subtitle */
+  font-size: 20px; /* Example font size, adjust as needed */
+  text-align: left; /* Ensures text within is aligned left */
+  font-weight: 700;  /* Example font size, adjust as needed */
+  margin: 0;
+} 
+
+p {
+  color: #000000; /* Black color for the subtitle */
+  font-size: 18px; /* Example font size, adjust as needed */
+  text-align: left; /* Ensures text within is aligned left */
+  margin: 0;
+}
+
+li {
+  color: #000000; /* Black color for the subtitle */
+  font-size: 18px; /* Example font size, adjust as needed */
+  text-align: left; /* Ensures text within is aligned left */
+  margin: 0;
+}    
+
 
 /* Desktop view: Profile appears above the Header */
-@media (min-width: 1500px) {
+@media (min-width: 1073px) {
   .profile-container {
     position: absolute;  /* Resets positioning to default */
-    max-width: 20%;       /* Resets the width to take full available space */
-    margin: 40px 300px;    /* Provides space above and below the profile */
+    max-width: 400px;       /* Resets the width to take full available space */
+    margin: 40px 15% 0px 5%;    /* Provides space above and below the profile */
     left: auto;        /* Resets left positioning */
     right: auto;       /* Resets right positioning */
     top: auto;         /* Resets top positioning */
     transform: none;   /* Clears any transformations */
   }
+  .profile-image {
+    width: 90%; /* Smaller size on mobile */
+    height: 90%; /* Smaller size on mobile */
+  }
   .header-container {
     display: flex;
-    align-items: right;
-    justify-content: right; /* Aligns items to the left */
+    align-items: center;
+    justify-content: center; /* Aligns items to the center */
     background-color: #000080; /* Dark blue background */
     color: #FFFFFF;
-    padding: 10px 300px;
     height: 100px;
     border-bottom: 4px solid #FFFFFF; /* Adds a 'border' that looks like a margin */
     box-shadow: 0px 1px 6px 0px #000000; /* Adds shadow under the border */
   }
-  .exp-ed-container {
-    max-width: 60%;       /* Resets the width to take full available space */
-    margin-left: 350px;
+  .header-text{
+    max-width: 60%;
+    padding-left:45%;
+  }
+  .experience-container {
+    max-width: 50%;       /* Resets the width to take full available space */
+    margin-left: 45%;
+  }
+}
+
+/* Desktop view adjustments for really big screens */
+@media (min-width: 1500px) {
+  .header-text{
+    padding-left: 40%;
+    margin-right: 20%;
+  }
+  .experience-container {
+    max-width: 50%;       /* Resets the width to take full available space */
+    margin-left: 35%;
   }
 }
 
 /* Mobile view adjustments to ensure profile appears below the Header */
-@media (max-width: 1499px) {
-  .app-container {
-    display: flex;
-    flex-direction: column; /* Adjusts the order to put Profile below Header */
-  }
-}
-
-@media (max-width: 767px) {
+@media (max-width: 1073px) {
   .profile-image {
     width: 90%; /* Smaller size on mobile */
     height: 90%; /* Smaller size on mobile */
+  }
+  .header-text{
+    padding-top: 3%;
+  }
+  .experience-container {
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
   
