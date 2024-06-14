@@ -14,8 +14,8 @@ function Experience() {
                    logrando:</p>
               <ul>
                 <li>Implementar métodos de envío y pago que aumentaron entre 2,5% y 15% la conversión del flujo.</li>
-                <li>Amplié en 70% la cobertura de seguros.</li>
-                <li>Crecí centro de uno a cuatro equipos de desarrollo de software.</li>
+                <li>Ampliar en 70% la cobertura de seguros.</li>
+                <li>Crecer centro de uno a cuatro equipos de desarrollo de software.</li>
               </ul>
           <h4>Product Manager</h4>  
             <h5>Lagash (IoT, React, Java)</h5>
@@ -32,7 +32,7 @@ function Experience() {
               <p>2017/2019</p>
               <p>Implementar Scrum, entrenar Product Owners y liderar equipos para aumentar su rendimiento. </p>
                 <ul>
-                  <li>Aumenté la capacidad de desarrollo por Sprint en 6 equipos de Backend.</li>
+                  <li>Aumentar la capacidad de desarrollo por Sprint en 6 equipos de Backend.</li>
                 </ul>
           <h4>Scrum Máster & Product Owner</h4>
             <h5>Rappi (PHP, SQL, Android, iOS, JavaScript)</h5>
